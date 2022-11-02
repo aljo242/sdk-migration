@@ -1,0 +1,14 @@
+syntax = "proto3";
+package aljo242.sdkmigration.sdkmigration;
+
+import "gogoproto/gogo.proto";
+import "sdkmigration/sdkmigration/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "github.com/aljo242/sdk-migration/x/sdkmigration/types";
+
+// GenesisState defines the sdkmigration module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
